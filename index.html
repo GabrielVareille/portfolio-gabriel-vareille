@@ -3,13 +3,77 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>hello world</title>
-		<style>
-			html,body{height:100%;margin:0}
-			body{display:flex;align-items:center;justify-content:center;font-family:Segoe UI,Arial,sans-serif}
-		</style>
+		<title>Portfolio - Gabriel Vareille</title>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		hello world accaczaeazeeaz
+		<header class="hero">
+			<div class="content">
+				<h1>Portfolio</h1>
+				<p>Gabriel Vareille — Réalisations vidéo & projets créatifs</p>
+			</div>
+		</header>
+
+		<main class="container">
+			<div class="section-title">
+				<h2>Mes réalisations</h2>
+			</div>
+
+			<section class="grid" id="gallery">
+				<!-- Exemple de vignette 1 -->
+				<article class="card">
+					<div class="badge">Vidéo</div>
+					<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 1">
+					<div class="overlay">
+						<div class="info">
+							<h3>Titre projet 1</h3>
+							<p>Année • Court descriptif</p>
+						</div>
+					</div>
+				</article>
+
+				<!-- Exemple de vignette 2 -->
+				<article class="card">
+					<div class="badge">Vidéo</div>
+					<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 2">
+					<div class="overlay">
+						<div class="info">
+							<h3>Titre projet 2</h3>
+							<p>Année • Court descriptif</p>
+						</div>
+					</div>
+				</article>
+
+				<!-- Exemple de vignette 3 -->
+				<article class="card">
+					<div class="badge">Vidéo</div>
+					<img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 3">
+					<div class="overlay">
+						<div class="info">
+							<h3>Titre projet 3</h3>
+							<p>Année • Court descriptif</p>
+						</div>
+					</div>
+				</article>
+
+				<!-- Exemple de vignette 4 -->
+				<article class="card">
+					<div class="badge">Vidéo</div>
+					<img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 4">
+					<div class="overlay">
+						<div class="info">
+							<h3>Titre projet 4</h3>
+							<p>Année • Court descriptif</p>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			© <span id="year"></span> Gabriel Vareille — Tous droits réservés
+		</footer>
+
+		<script src="scripts.js" defer></script>
 	</body>
 </html>
