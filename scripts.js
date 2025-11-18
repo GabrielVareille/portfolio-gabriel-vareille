@@ -153,6 +153,26 @@ document.addEventListener('DOMContentLoaded', function(){
       aboutElements.forEach(function(el){ aboutObserver.observe(el); });
     }
   }
+
+  // Mobile-only: Delay video card navigation by 1.5 seconds
+  var cardLinks = document.querySelectorAll('.card-link');
+  cardLinks.forEach(function(link){
+    link.addEventListener('click', function(e){
+      // Only on mobile (screen width <= 700px)
+      if(window.innerWidth <= 700){
+        e.preventDefault();
+        var card = link.querySelector('.card');
+        var href = link.getAttribute('href');
+        // Add visual feedback
+        if(card) card.style.opacity = '0.6';
+        // Navigate after 1.5 seconds
+        setTimeout(function(){
+          window.location.href = href;
+        }, 1500);
+      }
+      // Desktop: let the link navigate normally
+    });
+  });
 });
 
 // Placeholder: remplacer les images par des vidéos ou charger dynamiquement la galerie si besoin.
