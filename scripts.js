@@ -32,10 +32,16 @@ document.addEventListener('DOMContentLoaded', function(){
       var target = document.querySelector(cta.getAttribute('href'));
       if(target){
         e.preventDefault();
-        var top = target.getBoundingClientRect().top + window.pageYOffset - 20;
-        window.scrollTo({top: top, behavior: 'smooth'});
+        // Use scrollIntoView so CSS `scroll-margin-top` is respected when present
+        if('scrollBehavior' in document.documentElement.style){
+          try{ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+          catch(err){ /* ignore */ }
+        } else {
+          var top = target.getBoundingClientRect().top + window.pageYOffset - 20;
+          window.scrollTo({top: top, behavior: 'smooth'});
+        }
         target.setAttribute('tabindex', '-1');
-        target.focus({preventScroll:true});
+        try{ target.focus({preventScroll:true}); } catch(e){}
       }
     });
   }
