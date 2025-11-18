@@ -7,8 +7,22 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-			<div id="site-header"></div>
-			<header class="hero" id="hero">
+		<header class="site-header">
+			<div class="wrap">
+				<div class="logo"><a href="index.html">Gabriel V.</a></div>
+				<button class="burger" aria-controls="main-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav id="main-nav" class="main-nav">
+					<a href="index.html">Projets</a>
+					<a href="about.html">A propos</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+		<header class="hero" id="hero">
 				<div class="content">
 					<h1>Portfolio</h1>
 					<p>Gabriel Vareille — Réalisations vidéo & projets créatifs</p>
@@ -27,53 +41,57 @@
 			</div>
 
 			<section class="grid" id="gallery">
-				<!-- Exemple de vignette 1 -->
-				<article class="card">
-					<div class="badge">Vidéo</div>
-					<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 1">
-					<div class="overlay">
-						<div class="info">
-							<h3>Titre projet 1</h3>
-							<p>Année • Court descriptif</p>
+				<!-- Vignette 1 -->
+				<a href="videos/video-1.html" class="card-link">
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 1">
+						<div class="overlay">
+							<div class="info">
+								<h3>Titre projet 1</h3>
+								<p>2024 • Projet vidéo</p>
+							</div>
 						</div>
-					</div>
-				</article>
+					</article>
+				</a>
 
-				<!-- Exemple de vignette 2 -->
-				<article class="card">
-					<div class="badge">Vidéo</div>
-					<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 2">
-					<div class="overlay">
-						<div class="info">
-							<h3>Titre projet 2</h3>
-							<p>Année • Court descriptif</p>
+				<!-- Vignette 2 -->
+				<a href="videos/video-2.html" class="card-link">
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 2">
+						<div class="overlay">
+							<div class="info">
+								<h3>Titre projet 2</h3>
+								<p>2024 • Projet vidéo</p>
+							</div>
 						</div>
-					</div>
-				</article>
+					</article>
+				</a>
 
-				<!-- Exemple de vignette 3 -->
-				<article class="card">
-					<div class="badge">Vidéo</div>
-					<img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 3">
-					<div class="overlay">
-						<div class="info">
-							<h3>Titre projet 3</h3>
-							<p>Année • Court descriptif</p>
+				<!-- Vignette 3 -->
+				<a href="videos/video-3.html" class="card-link">
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 3">
+						<div class="overlay">
+							<div class="info">
+								<h3>Titre projet 3</h3>
+								<p>2024 • Projet vidéo</p>
+							</div>
 						</div>
-					</div>
-				</article>
+					</article>
+				</a>
 
-				<!-- Exemple de vignette 4 -->
-				<article class="card">
-					<div class="badge">Vidéo</div>
-					<img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 4">
-					<div class="overlay">
-						<div class="info">
-							<h3>Titre projet 4</h3>
-							<p>Année • Court descriptif</p>
+				<!-- Vignette 4 -->
+				<a href="videos/video-4.html" class="card-link">
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop&s=placeholder" alt="vignette 4">
+						<div class="overlay">
+							<div class="info">
+								<h3>Titre projet 4</h3>
+								<p>2024 • Projet vidéo</p>
+							</div>
 						</div>
-					</div>
-				</article>
+					</article>
+				</a>
 			</section>
 		</main>
 
