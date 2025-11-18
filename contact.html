@@ -6,7 +6,7 @@
     <title>Contact - Gabriel Vareille</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="page-contact">
     <header class="site-header">
       <div class="wrap">
         <div class="logo"><a href="index.html">Gabriel V.</a></div>
@@ -23,14 +23,45 @@
       </div>
     </header>
 
-    <main class="container">
-      <h1>Contact</h1>
-      <p>Coordonnées :</p>
-      <ul>
-        <li>Email: <a href="mailto:gabriel.vareille@gmail.com">gabriel.vareille@gmail.com</a></li>
-        <li>Téléphone: +33 6 12 34 56 78</li>
-        <li>Instagram: <a href="#">@votrecompte</a></li>
-      </ul>
+    <main>
+      <section class="contact-hero">
+        <h1>Contactez moi !</h1>
+      </section>
+
+      <section class="contact-cards">
+        <a class="contact-card" href="mailto:gabriel.vareille@gmail.com" aria-label="Envoyer un email à Gabriel Vareille">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <h3 class="contact-title">Email</h3>
+          <p class="contact-sub">gabriel.vareille@gmail.com</p>
+          <span class="contact-action">Envoyer un message</span>
+        </a>
+
+        <a class="contact-card" href="tel:+33651627503" aria-label="Appeler Gabriel Vareille">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/>
+            </svg>
+          </div>
+          <h3 class="contact-title">Téléphone</h3>
+          <p class="contact-sub">+33 6 51 62 75 03</p>
+          <span class="contact-action">Appeler</span>
+        </a>
+
+        <a class="contact-card" href="https://www.linkedin.com/in/gabriel-vareille/" target="_blank" rel="noopener noreferrer" aria-label="Voir le profil LinkedIn de Gabriel Vareille">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-9.75 7.5H7.5v7.5h1.75v-7.5zM9.375 7.5a1.02 1.02 0 110-2.041 1.02 1.02 0 010 2.041zM16.5 13.5c0-2.1-1.125-3-2.625-3-1.2 0-1.725.675-2.025 1.155V10.5H10.5v7.5h1.75v-4.125c0-.225.016-.45.082-.609.18-.525.59-1.071 1.279-1.071 0 0 1.007-.006 1.007 1.117V18h1.75v-4.5z"/>
+            </svg>
+          </div>
+          <h3 class="contact-title">LinkedIn</h3>
+          <p class="contact-sub">Voir mon profil professionnel</p>
+          <span class="contact-action">Visiter</span>
+        </a>
+      </section>
     </main>
 
     <footer>
