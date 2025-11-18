@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function(){
     var burger = document.querySelector('.burger');
     var mainNav = document.getElementById('main-nav');
     if(burger && mainNav){
+      // avoid binding events multiple times
+      if(burger.dataset.inited === '1') return;
+      burger.dataset.inited = '1';
       function closeMenu(){
         burger.classList.remove('active');
         burger.setAttribute('aria-expanded','false');
@@ -70,6 +73,9 @@ document.addEventListener('DOMContentLoaded', function(){
       document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
     }
   }
+
+  // ensure burger menu is initialized even when header is inlined
+  initBurgerMenu();
 
   // IntersectionObserver pour révéler les vignettes
   var cards = document.querySelectorAll('.card');
