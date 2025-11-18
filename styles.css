@@ -89,7 +89,15 @@ html{scroll-behavior:smooth}
 
 footer{color:rgba(255,255,255,0.6);text-align:center;padding:28px 0}
 
-/* Video detail page styles */
+/* About page animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.about-hero{opacity:0;animation:fadeInUp .6s ease forwards}
+.about-hero .profile-pic{opacity:0;animation:fadeInUp .6s ease forwards;animation-delay:.1s}
+.about-hero .about-text{opacity:0;animation:fadeInUp .6s ease forwards;animation-delay:.2s}
+.cv-section{opacity:0;animation:fadeInUp .6s ease forwards;animation-delay:.3s}
+.carousel-section h2{opacity:0;animation:fadeInUp .6s ease forwards;animation-delay:.15s}
+
+@media (prefers-reduced-motion: reduce){.about-hero,.about-hero .profile-pic,.about-hero .about-text,.carousel-section h2,.carousel-container,.cv-section{animation:none;opacity:1}}
 .video-detail{max-width:1100px;margin:40px auto;padding:0 20px}
 .video-player{width:100%;max-width:800px;margin:0 auto 28px;border-radius:12px;overflow:hidden;background:#000}
 .video-player video{width:100%;height:auto;display:block}
@@ -97,3 +105,31 @@ footer{color:rgba(255,255,255,0.6);text-align:center;padding:28px 0}
 .video-info p{color:rgba(255,255,255,0.8);margin:0;line-height:1.6}
 .back-link{display:inline-block;margin-bottom:20px;color:var(--accent);text-decoration:none;font-weight:600}
 .back-link:hover{text-decoration:underline}
+
+/* About page styles */
+.about-hero{max-width:900px;margin:0 auto;padding:40px 20px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media (max-width:768px){.about-hero{grid-template-columns:1fr;gap:28px}}
+.profile-pic{width:100%;max-width:300px;border-radius:12px;overflow:hidden;aspect-ratio:1/1}
+.profile-pic img{width:100%;height:100%;object-fit:cover;display:block}
+.about-text h1{font-size:32px;margin:0 0 16px;color:#fff}
+.about-text p{color:rgba(255,255,255,0.85);margin:0 0 16px;line-height:1.7}
+
+/* Carousel styles */
+.carousel-section{max-width:1100px;margin:60px auto;padding:0 20px;display:flex;flex-direction:column;align-items:center}
+.carousel-section h2{font-size:24px;margin:0 0 28px;color:#fff}
+.carousel-container{position:relative;overflow:hidden;border-radius:12px;background:var(--card-bg);aspect-ratio:16/9;width:100%;max-width:800px;opacity:0;transform:translateY(20px);animation:fadeInUp .6s ease forwards;animation-delay:.2s}
+.carousel-slides{display:flex;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
+.carousel-slide{min-width:100%;width:100%;height:100%;flex-shrink:0}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.carousel-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:0;padding:12px 16px;cursor:pointer;font-weight:600;border-radius:4px;z-index:5;transition:background .2s}
+.carousel-nav:hover{background:rgba(0,0,0,0.8)}
+.carousel-prev{left:12px}
+.carousel-next{right:12px}
+.carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.5);border:0;cursor:pointer;transition:background .2s}
+.dot.active{background:#fff}
+
+/* CV button */
+.cv-section{text-align:center;padding:40px 20px}
+.cv-btn{display:inline-block;padding:12px 28px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;transition:background .2s}
+.cv-btn:hover{background:#ff5252}

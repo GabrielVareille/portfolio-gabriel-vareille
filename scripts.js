@@ -87,6 +87,60 @@ document.addEventListener('DOMContentLoaded', function(){
     // fallback: reveal all
     cards.forEach(function(c){ c.classList.add('revealed'); });
   }
+
+  // Carousel functionality for About page
+  var carouselSlides = document.getElementById('carousel-slides');
+  var carouselDots = document.getElementById('carousel-dots');
+  if(carouselSlides){
+    var slides = carouselSlides.querySelectorAll('.carousel-slide');
+    var currentIndex = 0;
+    
+    // create dots
+    for(var i = 0; i < slides.length; i++){
+      var dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.onclick = function(index){
+        return function(){ goToSlide(index); };
+      }(i);
+      carouselDots.appendChild(dot);
+    }
+
+    window.carouselNext = function(){
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    };
+    window.carouselPrev = function(){
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    };
+    window.goToSlide = function(index){
+      currentIndex = index;
+      updateCarousel();
+    };
+    function updateCarousel(){
+      carouselSlides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+      var dots = carouselDots.querySelectorAll('.dot');
+      dots.forEach(function(d, i){
+        d.classList.toggle('active', i === currentIndex);
+      });
+    }
+  }
+
+  // Observe About page elements for reveal animations
+  if('IntersectionObserver' in window){
+    var aboutElements = document.querySelectorAll('.about-hero, .carousel-section h2, .carousel-container, .cv-section');
+    if(aboutElements.length){
+      var aboutObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.style.animation = 'fadeInUp .6s ease forwards';
+            aboutObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.1});
+      aboutElements.forEach(function(el){ aboutObserver.observe(el); });
+    }
+  }
 });
 
 // Placeholder: remplacer les images par des vidéos ou charger dynamiquement la galerie si besoin.
